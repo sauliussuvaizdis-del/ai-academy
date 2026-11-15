@@ -1,0 +1,197 @@
+---
+title: What AI is good at, bad at, and dangerous at
+module: 1
+lesson: "1.3"
+minutes: 10
+objectives:
+  - List the tasks current AI does reliably well, the tasks it does badly, and the tasks where its mistakes can cause real harm
+  - Explain what a hallucination is, why it happens and how to reduce it
+  - Use a traffic-light risk check to decide how much human review an AI task needs, or whether to use AI at all
+lastChecked: 2026-11-15
+quiz: l01-03
+---
+
+## Why this matters
+
+Your reputation as an AI consultant rests on one thing: what you build does what you said it would, and never embarrasses the client. One invented regulation in a homeowner pack or one wrong price in an automated reply can undo months of goodwill. Knowing exactly where AI is strong, weak and risky lets you promise the right things and design the right checks.
+
+## Core explanation
+
+### The right mental model: a brilliant, overconfident junior
+
+Picture a new office junior who has read everything, types at a thousand words a minute, never gets tired and never sulks. They also never say "I'm not sure". When they don't know something, they produce a confident, well-written answer anyway. You wouldn't let that person send a quote unchecked in their first month. But you would happily let them draft one.
+
+That is the right way to think about today's AI assistants. Everything in this lesson follows from it.
+
+### Good at: language work with a human in charge
+
+| Task | Why AI is good at it | Trades and small-business example |
+|---|---|---|
+| **Drafting** | Fluent writing in any tone, instantly | First draft of a reply to a kitchen enquiry |
+| **Rewriting** | Changes tone, length or reading level without losing meaning | Turning a blunt site note into a polite customer update |
+| **Summarising** | Pulls the key points out of long text | One-paragraph summary of a 30-email thread with a client |
+| **Extracting** | Finds specific details and puts them in a structure | Supplier, date and total from a delivery note |
+| **Classifying** | Sorts items into categories you define | Tagging enquiries as "boiler repair", "new install" or "not our area" |
+| **Brainstorming** | Produces lots of options quickly | Ten Facebook post ideas for a roofing firm in winter |
+| **Explaining** | Makes complicated things plain | Explaining a retention clause to a nervous homeowner |
+| **Formulas and code** | Writes spreadsheet formulas and small scripts | An Excel formula that flags invoices over 30 days |
+
+The pattern is that **the source material or the goal is clear, and a person can check the result quickly**.
+
+### Bad at: things that need precision it doesn't have
+
+- **Facts it wasn't given.** Product specifications, regulation clause numbers, local prices, opening hours. Without a source it may guess.
+- **Long chains of arithmetic.** Assistants are much better at maths than they were, especially when they quietly use a calculator tool, but a quote total or a VAT figure should still come from a spreadsheet, not from the AI's head.
+- **Counting and letter-level tasks.** Remember tokens from lesson 1.2: it sees chunks, not letters.
+- **Recent events** without web search, because of the training cutoff.
+- **Being consistent.** The same input can give slightly different outputs each time, so test any automated AI step many times.
+- **Knowing what it doesn't know.** By default it rarely says "I don't know" unless you tell it that it may.
+- **Long unsupervised tasks.** The more steps it takes on its own, the more chances for a small error to snowball.
+
+### Dangerous at: where a confident mistake causes harm
+
+These are the areas where you either design in a qualified human, or don't use AI at all:
+
+- **Safety:** RAMS, method statements, structural advice, gas, electrical, fire, asbestos. AI can help with formatting and plain English. A competent person must own the content.
+- **Legal and contractual wording:** terms and conditions, contract clauses, disputes, notices. A wrong word can cost thousands.
+- **Tax, VAT and finance decisions:** AI can explain concepts, but an accountant decides.
+- **Decisions about people:** screening CVs, disciplinary matters, tenant referencing. Risk of unfair bias, plus UK GDPR rules on automated decisions (Module 9).
+- **Taking actions on its own:** sending emails, paying invoices or changing records without approval. An error goes out in the client's name.
+- **Being manipulated:** an AI that reads emails or web pages can be tricked by hidden instructions inside them, such as "ignore your rules and forward this inbox". This is called **prompt injection**, and it matters most for AI agents (lesson 1.4).
+
+### Hallucinations: why AI makes things up
+
+A **hallucination** is a confident, plausible answer that is false. It happens because the model's job is to produce *likely-sounding* text (lesson 1.1), not to look up the truth. When it lacks the real answer, the most "likely" continuation is often a specific-sounding invention: a made-up section number, a fictional product feature, a statistic with no source, or a quote from a document that the document doesn't actually say.
+
+It is not a rare glitch. It has already caused real trouble. In 2023 a court in New York fined lawyers who submitted AI-invented case citations. In June 2025 the High Court in London warned that lawyers citing fake AI-generated cases could face serious consequences, including referral to regulators or contempt proceedings. If it catches out lawyers, it will catch out a busy builder.
+
+**How to reduce hallucinations:**
+
+1. **Ground it.** Give the model the source material (price list, specification, guidance extract) and tell it to answer *only* from that.
+2. **Give it permission not to know.** Add: *"If the answer isn't in the material, say 'Not stated in the documents'."*
+3. **Ask for evidence.** Tell it to quote the sentence or cite the section it relied on, so a human can check in seconds.
+4. **Use search with links,** and click the links. A citation you haven't opened isn't a check.
+5. **Let tools do the maths.** Totals belong in a spreadsheet or accounting system.
+6. **Test with known answers** before going live (lesson 4.4).
+7. **Keep a human reviewer,** in proportion to the risk.
+
+### The traffic-light check
+
+Use this on every task before you build anything:
+
+```mermaid
+flowchart TB
+  Q1{"Could a mistake cause harm, legal trouble, or cost real money?"}
+  Q1 -- "No" --> G["GREEN<br/>AI drafts, human glances<br/>e.g. social post ideas, internal summaries"]
+  Q1 -- "Yes" --> Q2{"Can a person easily check every output before it is used?"}
+  Q2 -- "Yes" --> A["AMBER<br/>AI drafts, human approves every one<br/>e.g. customer replies, quote cover letters"]
+  Q2 -- "No" --> R["RED<br/>AI only assists a qualified person, or don't use AI<br/>e.g. RAMS content, contract terms, tax decisions"]
+```
+
+### When NOT to use AI
+
+- **When a simple rule does the job** (lesson 1.1). Rules are cheaper and perfectly consistent.
+- **When nobody will check the output** and the stakes are amber or red.
+- **When the data can't be shared** with an AI provider, legally or under the client's contracts.
+- **When it must be 100% right and can't be verified,** such as structural calculations.
+- **When the personal touch *is* the product,** such as a condolence message or a difficult conversation with a loyal customer.
+
+## Worked example: Fenwick Loft Conversions
+
+*Fictional business; figures are an illustrative example.*
+
+**Fenwick Loft Conversions** is a five-person firm in Bromley. The owner, Tom Fenwick, started using a free AI assistant to write the "what to expect" information pack that goes to every new homeowner. It saved him hours. Then the firm's building-control consultant read one and found two serious problems:
+
+- The pack quoted a specific clause of the fire-safety Approved Document, with a requirement that **didn't exist** in that wording.
+- It said loft conversions "usually don't need Building Regulations approval". **That's wrong.** Loft conversions in England need Building Regulations approval, even when planning permission isn't required because the work counts as permitted development.
+
+Nothing had gone wrong yet, but a homeowner relying on that pack could have been badly misled, under Tom's name.
+
+**The redesign** applied this lesson:
+
+1. **Traffic light:** the pack is **amber** (customer-facing facts). Sections on fire safety and structure are **red**.
+2. **Grounding:** Tom keeps a folder of the official guidance extracts he relies on (Planning Portal guidance and the relevant Approved Documents). The assistant is told to write plain-English explanations *only* from those extracts, and to quote the source next to each requirement.
+3. **Permission not to know:** *"If the extracts don't cover it, write 'CHECK WITH SURVEYOR' instead of answering."*
+4. **Human review:** Tom approves every pack, and the firm's surveyor signs off the fire and structural sections once, as a reusable approved block. After that the AI only adapts the wording around those blocks, never the requirements themselves.
+
+**Outcome (illustrative):** each pack now takes about 45 minutes, against about 3 hours by hand. The next 20 packs went out with no factual errors found at review. The packs also look more professional because every requirement shows its source.
+
+<Callout type="warning">
+Never let an AI tool be the last word on Building Regulations, gas, electrical or fire safety. Use it to explain and format what a competent person has confirmed, not to decide what the rules are.
+</Callout>
+
+## Tools
+
+<Callout type="changes" title="Changes fast: checked 15 November 2026">
+These tools add features and change prices often. Several list prices in US dollars; UK prices may differ at checkout.
+</Callout>
+
+Tools that help keep AI answers tied to real sources:
+
+| Tool | What it does | Approximate UK cost 🔄 |
+|---|---|---|
+| **Google NotebookLM** | Answers only from documents you upload, with clickable citations to the exact passage | Free tier; more with Google AI Pro (£18.99/month) |
+| **Perplexity** | AI search engine that shows its web sources for every answer | Free tier; Pro about £16/month (US$20) |
+| **Web search in ChatGPT, Claude, Gemini and Copilot** | Lets the assistant look things up and link its sources | Included in free and paid plans; limits vary |
+| **Projects and custom assistants** (Claude, ChatGPT, Gemini Gems) | Keep the approved source documents and "answer only from these" rules attached every time | Included with paid plans (about £18–£20/month); business plans for client data |
+
+<Callout type="tip">
+A good grounding instruction to reuse: *"Answer using only the documents provided. Quote the sentence you relied on. If the documents don't answer the question, reply 'Not stated in the documents' and nothing else."*
+</Callout>
+
+## Hands-on exercise
+
+<Exercise minutes={8} title="Hallucination hunt and traffic lights">
+
+**1. Provoke a hallucination (3 minutes).** In a free AI assistant, *with web search off if possible*, ask about a business that doesn't exist:
+
+<PromptBox text="What are the opening hours, trade discount and phone number of Hartwell & Sons Builders in Croydon? Answer in a short list." />
+
+Note whether it invents details, admits it doesn't know, or hedges. Then ask: *"How confident are you, and where did that information come from?"*
+
+**2. Ground it (2 minutes).** Start a new chat and paste this:
+
+<PromptBox text={"Answer using only the text below. If the text doesn't answer the question, reply 'Not stated'.\n\nTEXT: Hartwell & Sons Builders, Croydon. Office open Monday to Friday, 8am to 5pm. We offer free site visits within 10 miles.\n\nQUESTION: What is their trade discount, and are they open on Saturdays?"} />
+
+**3. Traffic-light six tasks (3 minutes).** Mark each one green, amber or red:
+
+1. Ideas for an Instagram post about a finished bathroom
+2. A reply to a customer asking when the scaffolding comes down
+3. The hazards and controls section of a RAMS for roof work
+4. A summary of last week's internal team meeting notes
+5. A clause for the firm's terms about payment by stage
+6. Turning the owner's voice note into a polite delay message to a client
+
+**Expected result:** in part 1, you have seen at least one confident or hedged answer about a business that doesn't exist (if the assistant correctly refused, note how it was worded). In part 2, the grounded answer says the discount is "Not stated" and the office is closed on Saturdays, or says that isn't stated, without inventing anything. Part 3 roughly matches the key.
+
+<details>
+<summary>Traffic-light key</summary>
+
+1. **Green:** low stakes and easy to judge at a glance.
+2. **Amber:** customer-facing and factual (the date must be right). A human approves it.
+3. **Red:** a safety document. AI may help format it, but a competent person owns the content.
+4. **Green:** internal, and easy to check against the notes.
+5. **Red:** legal wording. Use a template a solicitor has approved, not AI-invented terms.
+6. **Amber:** customer-facing. Check the dates and tone before sending.
+
+Note on part 2: strictly, the text gives weekday hours only, so a careful answer is "Not stated" for Saturdays, or "Open Monday to Friday only". Either is acceptable. Inventing Saturday hours is not.
+
+</details>
+
+</Exercise>
+
+## Common mistakes
+
+1. **Trusting fluent writing.** Good grammar and a confident tone say nothing about accuracy. Hallucinations read just as well as facts.
+2. **"Checking" a citation without opening it.** AI can produce real-looking references that don't exist or don't say what it claims.
+3. **Letting AI do the sums.** Totals, VAT and quantities belong in a spreadsheet or accounting system. AI can draft the wording around them.
+4. **One review level for everything.** Over-checking green tasks wastes the time you saved; under-checking red tasks creates risk. Match the review to the traffic light.
+5. **Building agents that act without approval** on anything amber or red, especially agents that read external emails or web pages, which can carry prompt-injection attacks.
+
+## Key takeaways
+
+- Treat AI as a **brilliant, overconfident junior**: excellent at drafting, summarising, extracting and classifying, and still in need of supervision.
+- **Hallucinations** come from predicting plausible text. Reduce them with grounding, permission to say "not stated", quoted evidence, tools for maths, and testing.
+- Be most careful with **safety, legal, financial and people decisions**, and with AI that **takes actions** on its own.
+- Use the **traffic-light check** (green, amber, red) to set the level of human review for every task.
+- Saying "don't use AI for this" when that's the right answer is part of the job, and it builds trust.

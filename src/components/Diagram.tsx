@@ -12,6 +12,7 @@ export function Diagram({ chart, caption }: { chart: string; caption?: string })
   const dark = useIsDark()
   const id = 'mmd' + useId().replace(/[^a-zA-Z0-9]/g, '')
   const [svg, setSvg] = useState<string>('')
+  const [naturalWidth, setNaturalWidth] = useState(0)
   const [error, setError] = useState<string>('')
 
   useEffect(() => {
@@ -29,7 +30,11 @@ export function Diagram({ chart, caption }: { chart: string; caption?: string })
           flowchart: { htmlLabels: true, curve: 'basis' },
         })
         const { svg } = await mermaid.render(id + (dark ? 'd' : 'l'), chart.trim())
-        if (!cancelled) setSvg(svg)
+        if (!cancelled) {
+          const vb = /viewBox="[-\d.]+ [-\d.]+ ([\d.]+)/.exec(svg)
+          setNaturalWidth(vb ? Number(vb[1]) : 0)
+          setSvg(svg)
+        }
       })
       .catch((e: unknown) => !cancelled && setError(e instanceof Error ? e.message : String(e)))
     return () => {
@@ -43,11 +48,21 @@ export function Diagram({ chart, caption }: { chart: string; caption?: string })
         {error ? (
           <pre className="whitespace-pre-wrap text-sm text-red-600">Diagram error: {error}</pre>
         ) : svg ? (
-          <div className="mermaid-svg mx-auto flex justify-center [&_svg]:h-auto [&_svg]:max-w-full" dangerouslySetInnerHTML={{ __html: svg }} />
+          <div
+            className="mermaid-svg mx-auto flex justify-center [&_svg]:h-auto [&_svg]:max-w-full"
+            // Wide diagrams keep a readable size on phones and scroll sideways instead of shrinking.
+            style={naturalWidth > 480 ? { minWidth: `${Math.min(naturalWidth, 560)}px` } : undefined}
+            dangerouslySetInnerHTML={{ __html: svg }}
+          />
         ) : (
           <div className="h-40 animate-pulse rounded bg-navy-50 dark:bg-navy-800" aria-label="Loading diagram" />
         )}
       </div>
+      {naturalWidth > 480 && (
+        <p className="mt-1 text-center text-xs text-navy-500 sm:hidden print:hidden" aria-hidden>
+          ← swipe to see the whole diagram →
+        </p>
+      )}
       {caption && <figcaption className="mt-2 text-center text-sm text-navy-600 dark:text-navy-300">{caption}</figcaption>}
     </figure>
   )

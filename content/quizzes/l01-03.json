@@ -1,0 +1,63 @@
+{
+  "id": "l01-03",
+  "title": "Lesson 1.3 quiz",
+  "kind": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Why do AI language models hallucinate?",
+      "options": [
+        { "id": "a", "text": "They are programmed to lie when they don't know.", "correct": false, "explanation": "There is no intent. The model produces likely-sounding text, and that is sometimes false." },
+        { "id": "b", "text": "They generate plausible-sounding text rather than looking up verified facts, so gaps get filled with confident inventions.", "correct": true, "explanation": "Correct. Predicting likely text is the core mechanism, which is why grounding in real sources helps so much." },
+        { "id": "c", "text": "Only old or free models hallucinate.", "correct": false, "explanation": "All current models can hallucinate. Better models do it less, but never zero." },
+        { "id": "d", "text": "Because the internet is full of mistakes, and that's the only cause.", "correct": false, "explanation": "Bad training data can contribute, but models also invent things that appear nowhere in their training data." }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multi",
+      "prompt": "Which of these reduce hallucinations? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "Giving the model the source documents and telling it to answer only from them", "correct": true, "explanation": "Yes. This is called grounding, and it is the most effective single fix." },
+        { "id": "b", "text": "Telling it that it may answer 'Not stated in the documents'", "correct": true, "explanation": "Yes. Permission not to know removes the pressure to invent an answer." },
+        { "id": "c", "text": "Asking it to quote the sentence it relied on", "correct": true, "explanation": "Yes. Quoted evidence lets a human check the answer in seconds." },
+        { "id": "d", "text": "Telling it to sound more confident", "correct": false, "explanation": "No. Confidence of tone has no link to accuracy, and this makes errors harder to spot." }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "scenario",
+      "scenario": "An electrician wants AI to write the hazards and controls section of the RAMS for every job, and send it straight to the main contractor.",
+      "prompt": "Using the traffic-light check, what do you advise?",
+      "options": [
+        { "id": "a", "text": "Green: AI drafts, a quick glance is enough.", "correct": false, "explanation": "A safety document is never green. Mistakes can injure people." },
+        { "id": "b", "text": "Amber: AI drafts and the office manager approves.", "correct": false, "explanation": "Better, but the office manager may not be competent to judge electrical hazards. This needs a competent person." },
+        { "id": "c", "text": "Red: AI can help with formatting and plain English, but a competent person must own and approve the content, and nothing goes out automatically.", "correct": true, "explanation": "Correct. Safety content is red: a competent person owns it, with AI assisting at most." },
+        { "id": "d", "text": "AI should never be used anywhere near a RAMS document.", "correct": false, "explanation": "Overly strict. AI can usefully help format and clarify content a competent person has decided." }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Which task is AI generally BEST suited to?",
+      "options": [
+        { "id": "a", "text": "Calculating the VAT total on a 40-line quote", "correct": false, "explanation": "Totals and VAT belong in a spreadsheet or accounting system. AI can draft the wording around them." },
+        { "id": "b", "text": "Summarising a 30-email thread with a client into the key decisions and open questions", "correct": true, "explanation": "Correct. Summarising text you supply is a core strength, and it is easy to check against the thread." },
+        { "id": "c", "text": "Deciding which job applicants to reject", "correct": false, "explanation": "Decisions about people carry bias risks and UK GDPR rules on automated decision-making." },
+        { "id": "d", "text": "Telling you today's interest rate without web search", "correct": false, "explanation": "Without search, the training cutoff means it can't know current figures." }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "What is 'prompt injection'?",
+      "options": [
+        { "id": "a", "text": "Writing very long prompts to get better answers", "correct": false, "explanation": "That's just a long prompt. Prompt injection is an attack." },
+        { "id": "b", "text": "Hidden instructions inside content the AI reads, such as an email or web page, trying to make it ignore its rules or do something harmful", "correct": true, "explanation": "Correct. This is why agents that read external content shouldn't be able to send, pay or delete without approval." },
+        { "id": "c", "text": "A way to install AI into existing software", "correct": false, "explanation": "That's an integration. Prompt injection is a security risk." },
+        { "id": "d", "text": "Retraining a model on new data", "correct": false, "explanation": "That's fine-tuning (lesson 1.2)." }
+      ]
+    }
+  ]
+}

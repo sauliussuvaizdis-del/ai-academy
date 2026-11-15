@@ -1,0 +1,129 @@
+{
+  "id": "m01",
+  "title": "Module 1 quiz: AI Fundamentals",
+  "kind": "module",
+  "questions": [
+    {
+      "id": "q1", "type": "single",
+      "prompt": "A client asks for 'AI' to send a payment reminder exactly 30 days after every invoice date. What do you recommend?",
+      "options": [
+        { "id": "a", "text": "An LLM that writes a new reminder each time", "correct": false, "explanation": "Unnecessary. The rule is fixed, and the wording can be a template." },
+        { "id": "b", "text": "Rules-based automation, often already a feature of their accounting software", "correct": true, "explanation": "Correct. Fixed rule, predictable output, no AI needed. Saying so builds trust." },
+        { "id": "c", "text": "A machine-learning model to predict late payers", "correct": false, "explanation": "Not what was asked, and it would need lots of data." },
+        { "id": "d", "text": "An AI agent with access to the bank account", "correct": false, "explanation": "Far too much risk and complexity for a simple scheduled reminder." }
+      ]
+    },
+    {
+      "id": "q2", "type": "single",
+      "prompt": "Which statement about the products ChatGPT, Claude and Gemini is accurate?",
+      "options": [
+        { "id": "a", "text": "They are all the same model with different branding.", "correct": false, "explanation": "They are built on different models from different companies." },
+        { "id": "b", "text": "They are products built on large language models, and the models inside them are updated over time.", "correct": true, "explanation": "Correct. Product and model are different things, and the models change regularly." },
+        { "id": "c", "text": "They are search engines with a chat interface.", "correct": false, "explanation": "Some can search the web, but at their core they are language models that generate text." },
+        { "id": "d", "text": "They learn each customer's business automatically during use.", "correct": false, "explanation": "They don't learn in real time. Business knowledge has to be provided." }
+      ]
+    },
+    {
+      "id": "q3", "type": "single",
+      "prompt": "About how many tokens would a 3,000-word tender document be?",
+      "options": [
+        { "id": "a", "text": "About 750", "correct": false, "explanation": "Far too low. Tokens are usually smaller than words." },
+        { "id": "b", "text": "About 4,000", "correct": true, "explanation": "Correct. 3,000 × 1.3 ≈ 3,900 tokens." },
+        { "id": "c", "text": "About 30,000", "correct": false, "explanation": "Too high. That would be ten tokens per word." },
+        { "id": "d", "text": "Exactly 3,000", "correct": false, "explanation": "Tokens don't map one-to-one onto words." }
+      ]
+    },
+    {
+      "id": "q4", "type": "scenario",
+      "scenario": "A supplier tells a 10-person building firm: 'For £12,000 we'll train a custom AI on your data so it knows your prices and procedures.' The firm's price list and procedures come to about 60 pages.",
+      "prompt": "What is the most accurate response?",
+      "options": [
+        { "id": "a", "text": "That's the standard and only way to make AI know a business.", "correct": false, "explanation": "Fine-tuning is rarely needed to add knowledge." },
+        { "id": "b", "text": "Sixty pages fits easily in a modern context window. Attaching the documents to a project or custom assistant, with clear instructions, gives the same knowledge for a fraction of the cost.", "correct": true, "explanation": "Correct. Facts belong in the context (or in retrieval for large sets). Fine-tuning changes style and behaviour, not knowledge." },
+        { "id": "c", "text": "AI can never use a business's own information.", "correct": false, "explanation": "It can, through context or retrieval." },
+        { "id": "d", "text": "The firm should wait until AI can read PDFs.", "correct": false, "explanation": "AI can already read PDFs." }
+      ]
+    },
+    {
+      "id": "q5", "type": "single",
+      "prompt": "An assistant 'forgets' instructions given at the start of a very long chat. What is the main cause?",
+      "options": [
+        { "id": "a", "text": "The training cutoff", "correct": false, "explanation": "The cutoff concerns world knowledge, not earlier messages in the same chat." },
+        { "id": "b", "text": "The context window filling up, so earlier content is dropped or summarised", "correct": true, "explanation": "Correct. Put standing instructions in project or system settings, and start fresh chats for new tasks." },
+        { "id": "c", "text": "The model deliberately ignoring the user", "correct": false, "explanation": "There's no intent involved. It's a capacity limit." },
+        { "id": "d", "text": "The internet connection dropping", "correct": false, "explanation": "Unrelated to how the model handles long conversations." }
+      ]
+    },
+    {
+      "id": "q6", "type": "multi",
+      "prompt": "Which stages turn a general model into a helpful assistant set up for a specific job? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "Pre-training on a vast amount of text", "correct": true, "explanation": "Yes: the general-education stage that produces a base model." },
+        { "id": "b", "text": "Fine-tuning on examples of good answers", "correct": true, "explanation": "Yes: the apprenticeship that teaches it to follow instructions." },
+        { "id": "c", "text": "Feedback training on rated answers", "correct": true, "explanation": "Yes: shapes judgement and tone." },
+        { "id": "d", "text": "Product set-up with a system prompt, tools and documents", "correct": true, "explanation": "Yes: the site induction, and the layer you'll usually work in." }
+      ]
+    },
+    {
+      "id": "q7", "type": "single",
+      "prompt": "Which of these is the best grounding instruction to reduce hallucinations?",
+      "options": [
+        { "id": "a", "text": "'Be accurate.'", "correct": false, "explanation": "Too vague to change behaviour." },
+        { "id": "b", "text": "'Answer only from the documents provided, quote the sentence you used, and reply \"Not stated in the documents\" if the answer isn't there.'", "correct": true, "explanation": "Correct. It grounds the answer, asks for evidence, and gives permission not to know." },
+        { "id": "c", "text": "'Use your best guess if unsure.'", "correct": false, "explanation": "That invites invention." },
+        { "id": "d", "text": "'Write confidently and professionally.'", "correct": false, "explanation": "Tone doesn't affect accuracy, and confident errors are harder to spot." }
+      ]
+    },
+    {
+      "id": "q8", "type": "scenario",
+      "scenario": "A lettings agency wants AI to read new tenant applications and automatically reject any it considers 'high risk'.",
+      "prompt": "How should this be classified, and why?",
+      "options": [
+        { "id": "a", "text": "Green: it's just sorting.", "correct": false, "explanation": "Decisions about people carry bias and legal risks. They are never green." },
+        { "id": "b", "text": "Red: it's an automated decision about people, with risks of unfair bias and UK GDPR rules on automated decision-making. AI might help summarise applications for a human to decide.", "correct": true, "explanation": "Correct. Keep the decision with a person. Module 9 covers the legal detail." },
+        { "id": "c", "text": "Amber: fine as long as the AI is set to 'strict'.", "correct": false, "explanation": "A setting doesn't remove the bias or the legal risk of automated rejection." },
+        { "id": "d", "text": "Not an AI task at all, because AI can't read applications.", "correct": false, "explanation": "It can read them. The issue is who makes the decision." }
+      ]
+    },
+    {
+      "id": "q9", "type": "single",
+      "prompt": "Which multimodal workflow is the most mature and lowest-risk to build first for a trades business?",
+      "options": [
+        { "id": "a", "text": "An AI video avatar of the owner answering customer questions", "correct": false, "explanation": "Experimental, and it risks misleading customers." },
+        { "id": "b", "text": "Voice notes from site transcribed and turned into draft job sheets for the office to check", "correct": true, "explanation": "Correct. Transcription and text structuring are mature, and a human checks the output." },
+        { "id": "c", "text": "An agent that pays supplier invoices automatically", "correct": false, "explanation": "High risk. Payments should always need human approval." },
+        { "id": "d", "text": "Diagnosing structural cracks from customer photos", "correct": false, "explanation": "Diagnosis needs a qualified person on site." }
+      ]
+    },
+    {
+      "id": "q10", "type": "single",
+      "prompt": "Why do AI agents need stricter controls than a chat assistant?",
+      "options": [
+        { "id": "a", "text": "They are more expensive.", "correct": false, "explanation": "Cost isn't the main reason for controls." },
+        { "id": "b", "text": "They take actions (sending, filling in, clicking) and can be manipulated by prompt injection in content they read.", "correct": true, "explanation": "Correct. Actions have consequences, so keep sending, paying and deleting behind human approval." },
+        { "id": "c", "text": "They can't use tools.", "correct": false, "explanation": "Using tools is exactly what agents do." },
+        { "id": "d", "text": "They only work in English.", "correct": false, "explanation": "Irrelevant to the risk." }
+      ]
+    },
+    {
+      "id": "q11", "type": "single",
+      "prompt": "Which phrase passes the 'builder test' for explaining an automation?",
+      "options": [
+        { "id": "a", "text": "'An event-driven integration via webhooks and APIs.'", "correct": false, "explanation": "Accurate but jargon-heavy." },
+        { "id": "b", "text": "'A set of steps that runs by itself, like a sequence on a programme of works.'", "correct": true, "explanation": "Correct. It's plain English, uses a trade analogy, and is still accurate." },
+        { "id": "c", "text": "'Agentic orchestration.'", "correct": false, "explanation": "Pure jargon." },
+        { "id": "d", "text": "'Magic that runs your business.'", "correct": false, "explanation": "Over-promising hype." }
+      ]
+    },
+    {
+      "id": "q12", "type": "multi",
+      "prompt": "When should you advise a client NOT to use AI for a task? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "When a simple fixed rule does the job", "correct": true, "explanation": "Yes. Rules are cheaper and perfectly consistent." },
+        { "id": "b", "text": "When the stakes are high and nobody will check the output", "correct": true, "explanation": "Yes. Amber and red tasks need review. Without review, don't automate." },
+        { "id": "c", "text": "When the data can't legally or contractually be shared with an AI provider", "correct": true, "explanation": "Yes. Data protection comes first (Module 9)." },
+        { "id": "d", "text": "Whenever the task involves writing", "correct": false, "explanation": "Writing is one of AI's greatest strengths, with review where needed." }
+      ]
+    }
+  ]
+}

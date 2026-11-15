@@ -27,6 +27,8 @@ export default {
             'h2': { marginTop: '2em' },
             'code::before': { content: 'none' },
             'code::after': { content: 'none' },
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:last-of-type::after': { content: 'none' },
           },
         },
         invert: { css: { a: { color: theme('colors.amber.300') } } },

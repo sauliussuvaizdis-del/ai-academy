@@ -74,7 +74,7 @@ for (const f of files) {
   if (!/expected result/i.test(section('Hands-on exercise'))) err(where, 'exercise needs an "Expected result"')
   if (!/🔄/.test(section('Tools')) && !/type="changes"/.test(section('Tools'))) err(where, 'Tools section must flag prices/tools with 🔄')
   if (!/£/.test(f.body)) warn(where, 'no £ figures found: check UK currency is used')
-  if (/\$\d/.test(toPlainText(f.body))) warn(where, 'contains $ amounts: use £ unless quoting a US price deliberately')
+  if (/(?<!US)\$\d/.test(toPlainText(f.body))) warn(where, 'contains $ amounts: use £ unless quoting a US price deliberately')
 
   const mistakes = (section('Common mistakes').match(/^\s*(\d+\.|[-*])\s+/gm) ?? []).length
   if (mistakes < 3 || mistakes > 5) err(where, `Common mistakes should list 3–5 items (found ${mistakes})`)
