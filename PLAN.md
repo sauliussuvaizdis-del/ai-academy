@@ -7,7 +7,7 @@ Status: **awaiting owner approval** (reply "next" to start Phase 1).
 | Deliverable | Where it ends up |
 |---|---|
 | Interactive learning site | `https://sauliussuvaizdis-del.github.io/ai-academy/` (auto-deployed on every push) |
-| PDF book (A4, ~250–300 pages) | `output/AI-Practitioner-Academy.pdf` in the repo **and** downloadable from the site's `/downloads/` folder |
+| PDF book (A4; length follows the content — completeness over page count) | `output/AI-Practitioner-Academy.pdf` in the repo **and** downloadable from the site's `/downloads/` folder |
 | Toolkit PDFs (12 one-pagers/templates) | `output/toolkit/*.pdf`, also on the site |
 
 One source of truth: lessons are MDX files in `/content`; the website and the PDF are both built from them.
@@ -71,7 +71,7 @@ README.md      plain-English instructions
 | Final Exam | 20 |
 | **Total** | **650** (target 600–700 ✔) |
 
-Roughly 60 lessons, ~95,000–110,000 words of lesson text, ~300 lesson quiz questions, ~170 module quiz questions.
+Roughly 60 lessons. Depth is set by what each lesson needs to cover (all 10 required sections), not by a word or page target; ~300 lesson quiz questions, ~170 module quiz questions.
 
 ## 5. Phases
 
