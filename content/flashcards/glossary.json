@@ -1,0 +1,16 @@
+{
+  "terms": [
+    { "id": "artificial-intelligence", "term": "Artificial intelligence (AI)", "definition": "An umbrella term for computer systems that do tasks we normally associate with human thinking, such as understanding language, recognising images or making predictions.", "example": "Spam filters, route planners and ChatGPT are all forms of AI.", "lesson": "1.1" },
+    { "id": "machine-learning", "term": "Machine learning (ML)", "definition": "A type of AI that learns patterns from lots of examples, instead of following rules written by a person. It makes best guesses on new cases.", "example": "Accounting software suggesting the category for a bank transaction.", "lesson": "1.1" },
+    { "id": "deep-learning", "term": "Deep learning", "definition": "Machine learning using large, many-layered neural networks. Behind modern image recognition, speech transcription and LLMs.", "example": "Face unlock on a phone.", "lesson": "1.1" },
+    { "id": "neural-network", "term": "Neural network", "definition": "A system of many simple maths units connected in layers, loosely inspired by the brain, whose connection strengths are adjusted during training.", "lesson": "1.1" },
+    { "id": "llm", "term": "Large language model (LLM)", "definition": "A deep-learning model trained on huge amounts of text to predict the next word. It can draft, summarise, extract and answer questions in natural language.", "example": "The models inside Claude, ChatGPT and Gemini.", "lesson": "1.1" },
+    { "id": "generative-ai", "term": "Generative AI", "definition": "AI that creates new content (text, images, audio, video or code) rather than only sorting or scoring existing content.", "lesson": "1.1" },
+    { "id": "parameters", "term": "Parameters", "definition": "The adjustable numbers inside a model that are set during training. Large language models have billions of them.", "lesson": "1.1" },
+    { "id": "hallucination", "term": "Hallucination", "definition": "When an AI model produces information that sounds confident and plausible but is false or made up.", "example": "Quoting a building regulation clause that doesn't exist.", "lesson": "1.1" },
+    { "id": "model-vs-product", "term": "Model vs. product", "definition": "The model is the AI engine (e.g. a GPT or Claude model); the product is the app or service built around it (e.g. ChatGPT or Claude.ai). Products change their models over time.", "lesson": "1.1" },
+    { "id": "rules-based-automation", "term": "Rules-based automation", "definition": "Software that follows fixed, human-written rules: same input, same output every time. Not AI, but often the backbone of AI workflows.", "example": "Copy every new web-form enquiry into a spreadsheet.", "lesson": "1.1" },
+    { "id": "training-data", "term": "Training data", "definition": "The examples a machine-learning model learns from. An LLM's training data is a vast collection of text; a spam filter's is a set of labelled emails.", "lesson": "1.1" },
+    { "id": "ai-assistant", "term": "AI assistant", "definition": "A chat-based product, built on an LLM, that you can ask to write, summarise, analyse or answer questions.", "example": "ChatGPT, Claude, Gemini, Microsoft Copilot.", "lesson": "1.1" }
+  ]
+}

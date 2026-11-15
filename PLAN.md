@@ -1,6 +1,6 @@
 # AI Practitioner Academy — Phase 0 Plan
 
-Status: **awaiting owner approval** (reply "next" to start Phase 1).
+Status: **approved**. Phase 1 complete; see the README for how the site is built.
 
 ## 1. What gets built
 
