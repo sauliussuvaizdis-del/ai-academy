@@ -1,0 +1,52 @@
+# Builds the site and publishes it to GitHub Pages (via the gh-pages branch)
+# every time work is pushed. The owner can then open it on a phone.
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main, claude/course-content-setup-kwee4i]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build the site
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+            npm run build
+          else
+            # Before the app exists (Phase 0) publish the plan preview page.
+            mkdir -p dist
+            cp -r preview/* dist/
+          fi
+
+      - name: Copy PDF book and toolkit into the site's downloads folder
+        run: |
+          if [ -d output ]; then
+            mkdir -p dist/downloads
+            cp -r output/* dist/downloads/
+          fi
+          touch dist/.nojekyll
+
+      - name: Publish to the gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true
