@@ -1,0 +1,58 @@
+import{d as h,j as e}from"./index-D52CuqGB.js";const d={title:"Jargon buster: explaining AI to a sceptical builder in 60 seconds",module:1,lesson:"1.5",minutes:5,objectives:["Deliver a 60-second plain-English explanation of AI that a sceptical tradesperson accepts","Swap common AI jargon for everyday words without losing accuracy"],lastChecked:"2026-11-15",quiz:"l01-05"};function a(n){const t={blockquote:"blockquote",code:"code",em:"em",h2:"h2",h3:"h3",li:"li",ol:"ol",p:"p",pre:"pre",strong:"strong",table:"table",tbody:"tbody",td:"td",th:"th",thead:"thead",tr:"tr",ul:"ul",...h(),...n.components},{Callout:s,Exercise:o,PromptBox:r}=t;return s||i("Callout"),o||i("Exercise"),r||i("PromptBox"),e.jsxs(e.Fragment,{children:[e.jsx(t.h2,{children:"Why this matters"}),`
+`,e.jsx(t.p,{children:`Most first meetings are won or lost in the first minute. A builder who hears "agentic LLM workflows" switches off. A builder who hears "your enquiries answered in your words while you're on the tools, and you approve every one" leans in. This lesson turns the whole of Module 1 into something you can say over a cup of tea.`}),`
+`,e.jsx(t.h2,{children:"Core explanation"}),`
+`,e.jsx(t.h3,{children:"The 60-second structure"}),`
+`,e.jsx(t.p,{children:"Use four beats. Each one takes about 15 seconds."}),`
+`,e.jsx(t.pre,{children:e.jsx(t.code,{className:"language-mermaid",children:`flowchart TB
+  A["What it is<br/>one plain sentence"] --> B["What it does for YOU<br/>an example from their trade"]
+  B --> C["What it can't do<br/>one honest limit"]
+  C --> D["Next step<br/>small and specific"]
+`})}),`
+`,e.jsx(t.p,{children:e.jsx(t.strong,{children:"A script you can adapt:"})}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:["AI tools like ChatGPT are basically a very fast, well-read office junior that writes and reads for you. ",e.jsx(t.strong,{children:"(What it is)"})]}),`
+`,e.jsxs(t.p,{children:["For a firm like yours, that means an enquiry comes in at 9pm and there's a proper reply drafted in your words by the time you check your phone, or your voice note from site turns into a typed job sheet. ",e.jsx(t.strong,{children:"(For you)"})]}),`
+`,e.jsxs(t.p,{children:["It isn't magic and it does get things wrong, so nothing goes to a customer without you or your office approving it. ",e.jsx(t.strong,{children:"(Honest limit)"})]}),`
+`,e.jsxs(t.p,{children:["The easiest way to see if it's worth it is for me to set one up on your real enquiries for a fortnight and count the hours it saves. ",e.jsx(t.strong,{children:"(Next step)"})]}),`
+`]}),`
+`,e.jsx(t.p,{children:`Notice what it leaves out: no "LLM", no "tokens", no "machine learning". You know all of it. The client doesn't need to.`}),`
+`,e.jsx(t.h3,{children:"The builder test"}),`
+`,e.jsxs(t.p,{children:["Before you use any phrase with a client, ask yourself: ",e.jsx(t.em,{children:"would a busy groundworker understand this on the first hearing, without me explaining it?"})," If not, translate it."]}),`
+`,e.jsxs(t.table,{children:[e.jsx(t.thead,{children:e.jsxs(t.tr,{children:[e.jsx(t.th,{children:"Jargon"}),e.jsx(t.th,{children:"Say this instead"})]})}),e.jsxs(t.tbody,{children:[e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Large language model (LLM)"}),e.jsx(t.td,{children:'"The AI that reads and writes, like ChatGPT"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Prompt"}),e.jsx(t.td,{children:'"The instructions you give it"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Hallucination"}),e.jsx(t.td,{children:'"It sometimes makes things up confidently, so we check its work"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Context window"}),e.jsx(t.td,{children:'"How much it can read at once"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Training data"}),e.jsx(t.td,{children:'"What it learned from before it ever met you"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Automation / workflow"}),e.jsx(t.td,{children:'"A set of steps that runs by itself, like a programme of works"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Integration / API"}),e.jsx(t.td,{children:'"Connecting it to the software you already use"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"AI agent"}),e.jsx(t.td,{children:'"AI that can carry out a few steps for you, with you signing off"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"RAG / knowledge base"}),e.jsx(t.td,{children:'"It answers from your own documents, not from the internet"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"Human in the loop"}),e.jsx(t.td,{children:'"You approve it before it goes out"'})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:"ROI"}),e.jsx(t.td,{children:'"What it saves you compared with what it costs"'})]})]})]}),`
+`,e.jsx(t.h3,{children:"Handling the three classic sceptic lines"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:`"It's just hype."`})," ",e.jsx(t.em,{children:'"A lot of it is. I only build things that save measurable hours, and we count them before and after."'})]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:`"It'll get things wrong."`})," ",e.jsx(t.em,{children:`"It will sometimes. That's why it drafts and you approve. You stay in charge of everything that goes out."`})]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:`"We're too small for AI."`})," ",e.jsx(t.em,{children:`"Small firms gain the most, because there's no office team to absorb the admin. It's usually the owner doing it at 10pm."`})]}),`
+`]}),`
+`,e.jsx(t.p,{children:"Module 12 covers the full set of objections, with practice role-plays."}),`
+`,e.jsx(s,{type:"trades",children:e.jsxs(t.p,{children:["Construction analogies land well because they are true to how the systems work: an ",e.jsx(t.strong,{children:"automation"})," is a sequence on a programme of works; ",e.jsx(t.strong,{children:"AI drafting with approval"})," is a junior estimator whose quotes you sign off; ",e.jsx(t.strong,{children:"giving AI your documents"})," is a site induction."]})}),`
+`,e.jsx(t.h2,{children:"Worked example: Mullins Groundworks"}),`
+`,e.jsx(t.p,{children:e.jsx(t.em,{children:"Fictional business; dialogue and figures are an illustrative example."})}),`
+`,e.jsxs(t.p,{children:['Gary Mullins runs a nine-person groundworks firm in Essex. He agreed to "ten minutes, no sales pitch" at a networking breakfast and opened with: ',e.jsx(t.em,{children:'"My nephew showed me ChatGPT. It wrote a poem about a digger. What use is that to me?"'})]}),`
+`,e.jsxs(t.p,{children:["The consultant skipped the technology entirely: ",e.jsx(t.em,{children:'"Fair. Poems are no use. How do your quotes get written at the moment?"'})," Gary: ",e.jsx(t.em,{children:'"I do them Sunday nights. About six a week, an hour each."'})," The consultant then used the four beats: a fast office junior → it turns your site notes into a draft quote in your wording → it gets prices wrong if you let it guess, so your price list is the only source and you check every one → ",e.jsx(t.em,{children:`"Send me three old quotes and the notes behind them, and I'll show you next week what it would have drafted."`})]}),`
+`,e.jsxs(t.p,{children:[e.jsx(t.strong,{children:"Outcome (illustrative):"})," the demo used Gary's real notes, and the drafts needed about 15 minutes of editing each, against an hour from scratch. That is roughly 4–5 Sunday-night hours back each week. Gary booked a paid discovery session. What won him over wasn't the technology. It was being spoken to in his terms, with an honest limit, and a test on his own work."]}),`
+`,e.jsx(t.h2,{children:"Tools"}),`
+`,e.jsx(s,{type:"changes",title:"Changes fast: checked 15 November 2026",children:e.jsx(t.p,{children:"Voice features and their free-tier limits change often. Check what the free versions currently include."})}),`
+`,e.jsx(t.p,{children:"You need no special tools to explain AI, but you can practise with one:"}),`
+`,e.jsxs(t.table,{children:[e.jsx(t.thead,{children:e.jsxs(t.tr,{children:[e.jsx(t.th,{children:"Tool"}),e.jsx(t.th,{children:"Use for practice"}),e.jsx(t.th,{children:"Approximate UK cost 🔄"})]})}),e.jsxs(t.tbody,{children:[e.jsxs(t.tr,{children:[e.jsxs(t.td,{children:[e.jsx(t.strong,{children:"Voice mode"})," in ChatGPT, Claude or Gemini (Gemini Live) mobile apps"]}),e.jsx(t.td,{children:"Speak your 60-second explanation and have the AI play a sceptical owner who talks back"}),e.jsx(t.td,{children:"Free tiers include voice, with usage limits; paid plans about £18–£20/month"})]}),e.jsxs(t.tr,{children:[e.jsx(t.td,{children:e.jsx(t.strong,{children:"Your phone's voice recorder"})}),e.jsx(t.td,{children:"Record your pitch, play it back and time it"}),e.jsx(t.td,{children:"Free"})]})]})]}),`
+`,e.jsx(t.h2,{children:"Hands-on exercise"}),`
+`,e.jsxs(o,{minutes:5,title:"Write it, say it, get pushback",children:[e.jsxs(t.ol,{children:[`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Write (2 minutes)."})," Using the four beats, write your own 60-second explanation for a trade you know well, such as roofers, electricians or kitchen fitters. Use one example from that trade."]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Say it (1 minute)."})," Record yourself reading it and time it. Cut anything that takes it past 70 seconds."]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Get pushback (2 minutes)."})," Open voice mode in an AI app and say:"]}),`
+`]}),e.jsx(r,{text:"Play a sceptical, busy roofing contractor called Dave who has been burned by tech salesmen before. I'm going to explain AI to you in 60 seconds. Reply in character with one blunt objection, then wait for my answer. Keep your replies short."}),e.jsxs(t.p,{children:[e.jsx(t.strong,{children:"Expected result:"}),' a 60-second explanation with no jargon from the table above, one real trade example, one honest limit and one small next step, plus a note of the objection "Dave" raised and how you would answer it better next time.']})]}),`
+`,e.jsx(t.h2,{children:"Common mistakes"}),`
+`,e.jsxs(t.ol,{children:[`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Leading with technology."})," Start with ",e.jsx(t.em,{children:"their"})," problem, not with how AI works."]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Over-promising."}),' "It does everything automatically" sounds great until the first mistake. Always include the honest limit.']}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Using jargon to sound expert."})," It does the opposite: it sounds like a salesman hiding something."]}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.strong,{children:"Ending without a next step."})," Finish with something small and specific, such as a test on their real enquiries."]}),`
+`]}),`
+`,e.jsx(t.h2,{children:"Key takeaways"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:["Use the four beats: ",e.jsx(t.strong,{children:"what it is → what it does for them → one honest limit → a small next step"}),"."]}),`
+`,e.jsxs(t.li,{children:["Pass the ",e.jsx(t.strong,{children:"builder test"}),": translate every technical term into everyday words."]}),`
+`,e.jsx(t.li,{children:"Trade analogies (programme of works, junior estimator, site induction) are both persuasive and accurate."}),`
+`,e.jsxs(t.li,{children:["Demos on the client's ",e.jsx(t.strong,{children:"own work"})," convince far more than any explanation."]}),`
+`]})]})}function c(n={}){const{wrapper:t}={...h(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(a,{...n})}):a(n)}function i(n,t){throw new Error("Expected component `"+n+"` to be defined: you likely forgot to import, pass, or provide it.")}export{c as default,d as frontmatter};
