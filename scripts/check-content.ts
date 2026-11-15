@@ -67,6 +67,9 @@ for (const f of files) {
   }
 
   if (!/```mermaid|<\w*Figure\b|<Diagram\b|<svg\b/.test(f.body)) err(where, 'needs at least one diagram (mermaid block or SVG figure)')
+  for (const block of f.body.matchAll(/```mermaid([\s\S]*?)```/g)) {
+    if (/\["\s*\d+\.\s/.test(block[1])) err(where, 'mermaid label starts with "1. " which Mermaid renders as "Unsupported markdown: list"; write "Step 1:" instead')
+  }
   if (!/<Exercise\b/.test(f.body)) err(where, 'hands-on exercise should use the <Exercise> component')
   if (!/expected result/i.test(section('Hands-on exercise'))) err(where, 'exercise needs an "Expected result"')
   if (!/🔄/.test(section('Tools')) && !/type="changes"/.test(section('Tools'))) err(where, 'Tools section must flag prices/tools with 🔄')

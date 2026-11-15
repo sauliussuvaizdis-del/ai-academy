@@ -5,6 +5,7 @@ import { Checklist } from './Checklist'
 import { Diagram } from './Diagram'
 import { Exercise } from './Exercise'
 import { AINestingFigure } from './figures/AINestingFigure'
+import { ContextWindowFigure } from './figures/ContextWindowFigure'
 import { PriceCalculator } from './PriceCalculator'
 import { PromptBox } from './PromptBox'
 import { ROICalculator } from './ROICalculator'
@@ -45,6 +46,7 @@ export const mdxComponents = {
   Diagram,
   Exercise,
   AINestingFigure,
+  ContextWindowFigure,
   ROICalculator,
   PriceCalculator,
   PromptBox,

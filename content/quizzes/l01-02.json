@@ -1,0 +1,63 @@
+{
+  "id": "l01-02",
+  "title": "Lesson 1.2 quiz",
+  "kind": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Roughly how many tokens is a 1,000-word document in English?",
+      "options": [
+        { "id": "a", "text": "About 250", "correct": false, "explanation": "Too low. That would be about four words per token, but a token is usually less than one word." },
+        { "id": "b", "text": "About 1,300", "correct": true, "explanation": "Correct. The rule of thumb is about 1.3 tokens per English word." },
+        { "id": "c", "text": "About 5,000", "correct": false, "explanation": "Too high. That is closer to the number of characters than the number of tokens." },
+        { "id": "d", "text": "Exactly 1,000: one token per word", "correct": false, "explanation": "Longer or unusual words are often split into several tokens, and punctuation counts too." }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "scenario",
+      "scenario": "A plumbing firm's office manager says: 'I told the assistant our call-out fee at the start of this morning's chat. Now, three hours and dozens of messages later, it's using the wrong figure.'",
+      "prompt": "What is the most likely explanation and fix?",
+      "options": [
+        { "id": "a", "text": "The model is broken; switch to a different provider.", "correct": false, "explanation": "This is normal behaviour, not a fault, and switching provider won't fix it." },
+        { "id": "b", "text": "The long chat filled the context window, so earlier details were dropped or summarised. Put key facts in the assistant's saved instructions or files, and start fresh chats for new tasks.", "correct": true, "explanation": "Correct. The context window is a limited desk. Facts that matter every time belong in the project or system instructions, not in an early chat message." },
+        { "id": "c", "text": "The model learned a different fee from other users overnight.", "correct": false, "explanation": "Models don't learn from other users in real time during a conversation." },
+        { "id": "d", "text": "The training cutoff has passed.", "correct": false, "explanation": "The cutoff concerns world knowledge from training. It doesn't explain forgetting something said earlier in the same chat." }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "A small accountancy practice wants an assistant that answers staff questions from its 50-page procedures manual. Which approach should you recommend first?",
+      "options": [
+        { "id": "a", "text": "Fine-tune a model on the manual.", "correct": false, "explanation": "Fine-tuning is for changing style or behaviour, not for adding facts. It is costly and unnecessary here." },
+        { "id": "b", "text": "Put the manual in the context, using a project or custom assistant, with instructions to answer only from it and cite sections.", "correct": true, "explanation": "Correct. A 50-page manual is around 25,000–30,000 tokens, which fits easily. It is quick, cheap and easy to check." },
+        { "id": "c", "text": "Build a full retrieval (RAG) system with a database.", "correct": false, "explanation": "Retrieval suits large or fast-changing document sets. At this size it adds complexity without benefit." },
+        { "id": "d", "text": "Nothing: the model already knows the practice's procedures from its training.", "correct": false, "explanation": "Training contains general knowledge, not this firm's private procedures." }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "prompt": "Which of these describe how a general model is turned into a helpful, specialised assistant? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "Fine-tuning on examples of good, helpful answers", "correct": true, "explanation": "Yes. This turns a base model, which just continues text, into one that follows instructions." },
+        { "id": "b", "text": "Feedback training, where people and AI rate which answers are better", "correct": true, "explanation": "Yes. This shapes judgement and tone, and is part of why different assistants feel different." },
+        { "id": "c", "text": "Product set-up: a system prompt, tools and documents for a particular job", "correct": true, "explanation": "Yes. This is the layer you will usually work in when building for clients." },
+        { "id": "d", "text": "Each chat with a customer permanently retraining the model in real time", "correct": false, "explanation": "No. Chats don't retrain the model as they happen. Any future training use depends on the plan and settings." }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "A client asks: 'If my staff paste customer emails into AI, will it be used to train the AI?' What is the most accurate answer?",
+      "options": [
+        { "id": "a", "text": "Never. AI companies don't use chats for training.", "correct": false, "explanation": "Not true. Many personal plans may use chats for training unless the user switches it off." },
+        { "id": "b", "text": "Always, whatever plan you use.", "correct": false, "explanation": "Not true. Business plans and API access are typically excluded from training by default." },
+        { "id": "c", "text": "It depends on the plan and settings. Personal plans may allow it by default; business plans and the API typically don't. Use a business plan, check the settings and the terms, and keep personal data to a minimum.", "correct": true, "explanation": "Correct. It is precise and honest, and it points to the right action. Module 9 covers the UK GDPR side." },
+        { "id": "d", "text": "Only if the email mentions AI.", "correct": false, "explanation": "The content of the email has nothing to do with whether the provider may train on it." }
+      ]
+    }
+  ]
+}
